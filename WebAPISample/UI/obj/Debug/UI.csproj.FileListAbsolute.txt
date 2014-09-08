@@ -1,0 +1,5 @@
+C:\Users\vavenbak\Desktop\Demo\WebAPISample\UI\bin\UI.dll.config
+C:\Users\vavenbak\Desktop\Demo\WebAPISample\UI\bin\UI.dll
+C:\Users\vavenbak\Desktop\Demo\WebAPISample\UI\bin\UI.pdb
+C:\Users\vavenbak\Desktop\Demo\WebAPISample\UI\obj\Debug\UI.dll
+C:\Users\vavenbak\Desktop\Demo\WebAPISample\UI\obj\Debug\UI.pdb

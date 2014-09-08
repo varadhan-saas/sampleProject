@@ -1,0 +1,48 @@
+﻿<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script data-require="jquery@*" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.1.1" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link data-require="bootstrap-css@3.1.1" data-semver="3.1.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <script type="text/javascript">
+        function getResponse(data) {
+            console.log(data);
+            document.getElementById("answer").innerHTML = "Output: " + data;
+            /*
+            var txt = data;
+
+            if (window.DOMParser) {
+                parser = new DOMParser();
+                xmlDoc = parser.parseFromString(txt, "text/xml");
+            }
+            else // Internet Explorer
+            {
+                xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+                xmlDoc.async = false;
+                xmlDoc.loadXML(txt);
+            }
+
+            alert(xmlDoc.getElementsByTagName("string")[0].childNodes[0].nodeValue);
+            */
+
+		}
+		function callAddService(){
+			var val1 = document.getElementById("value1").value;
+			var val2 = document.getElementById("value2").value;
+			var op = document.getElementById("op").value;
+			$.get("http://localhost:27631/Calc/Calculator?a="+val1+"&b="+val2+"&op="+op,getResponse);
+		}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form>
+            Enter value 1:<input type="text" class="form-control" id="value1"><br />
+            Enter value 2:<input type="text" class="form-control" id="value2"><br />
+            Enter operator:<input type="text" class="form-control" id="op"><br />
+            <input type="button" class="btn btn-primary" onclick="callAddService()" value="Add"><br />
+            <span id="answer" />
+        </form>
+    </div>
+</body>
+</html>
